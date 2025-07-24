@@ -1,50 +1,45 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
- 
-const Card1=()=> {
+import React from "react";
+
+const Card1 = () => {
   return (
-    <Card className="w-96">
-      <CardHeader shadow={false} floated={false} className="h-96">
+    <div className="max-w-sm bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-transform duration-300 transform hover:scale-95 active:scale-95 p-28">
+      {/* Top right icons */}
+      <div className="flex justify-end space-x-3 text-gray-500 text-lg mb-2 ">
+        <a href="gi" className="fas fa-search hover:text-blue-500" aria-label="Search"></a>
+        <a href="my" className="fas fa-heart hover:text-red-500" aria-label="Add to favorites"></a>
+        <a href="hii" className="fas fa-eye hover:text-green-500" aria-label="View details"></a>
+      </div>
+
+      {/* Image with discount label */}
+      <div className="relative group overflow-hidden rounded-xl ">
+        <span className="absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">
+          -20%
+        </span>
         <img
-          src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
-          alt="card-image"
-          className="h-full w-full object-cover"
+          src={require("../Images/book1.jpg")}
+          alt="Featured Book"
+          className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
         />
-      </CardHeader>
-      <CardBody>
-        <div className="mb-2 flex items-center justify-between">
-          <Typography color="blue-gray" className="font-medium">
-            Apple AirPods
-          </Typography>
-          <Typography color="blue-gray" className="font-medium">
-            $95.00
-          </Typography>
-        </div>
-        <Typography
-          variant="small"
-          color="gray"
-          className="font-normal opacity-75"
+      </div>
+
+      {/* Content section */}
+      <div className="text-center mt-4">
+        <h3 className="text-lg font-semibold text-gray-800 mb-1">Featured Book Title</h3>
+        <p className="text-green-600 font-bold text-base">
+          720Npr
+          <span className="text-sm text-gray-400 line-through ml-2">900Npr</span>
+        </p>
+
+        {/* Add to cart button */}
+        <a
+          href="fi"
+          className="mt-4 inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-medium rounded-full hover:from-indigo-600 hover:to-blue-700 transition"
         >
-          With plenty of talk and listen time, voice-activated Siri access, and
-          an available wireless charging case.
-        </Typography>
-      </CardBody>
-      <CardFooter className="pt-0">
-        <Button
-          ripple={false}
-          fullWidth={true}
-          className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-        >
-          Add to Cart
-        </Button>
-      </CardFooter>
-    </Card>
+          <i className="fas fa-cart-plus"></i> Add to Cart
+        </a>
+      </div>
+    </div>
   );
-}
-export default Card1
+};
+
+export default Card1;

@@ -11,12 +11,12 @@ const HomePage = () => {
         <div className="text-lg md:text-xl text-gray-700 max-w-md space-y-4">
   
   
-  <h1 className="text-4xl font-bold  md:text-5xl text-blue-800 mb-6">Up to 50% Off</h1>
+  <h1 className="text-4xl font-bold  md:text-5xl text-black mb-6">Up to 75% Off</h1>
 
   <p className="text-base md:text-lg text-gray-600">
-    Good news for you! If you buy any book on Saturday and Sunday, you’ll get <span className="font-semibold">50% off</span> and also enjoy <span className="font-semibold">free delivery</span>.
+    There is a good news for all of you, if you buy any book from our website then you will get 75% discount and also you will get free delivery. <span className="font-semibold"></span> 
   </p>
-  <button className="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded transition">
+  <button className="bg-green-600 hover:bg-green-800 text-white px-6 py-2 rounded transition">
     Shop Now
   </button>
 
